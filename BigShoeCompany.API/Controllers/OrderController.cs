@@ -22,17 +22,20 @@ namespace BigShoeCompany.Controllers
         [Route("order/upload-order-file")]
         public async Task<IActionResult> UploadTemplateFile([FromForm] OrderBlobFileModel file)
         {
-            FileContentTypeModule.ValidateContentType(file.File.FileName, FileContentTypeModule.AcceptedFileTypeOrder);
+            if (file.File == null)
+                return BadRequest("No file has been provided.");
+
             try
             {
+                FileContentTypeModule.ValidateContentType(file.File.FileName, FileContentTypeModule.AcceptedFileTypeOrder);
                 var result = await _orderService.UploadOrderFile(file);
                 return Ok(result);
 
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error uploading saas file", ex.Message);
-                return new UnsupportedMediaTypeResult();
+                _logger.LogError("Error uploading order file", ex.Message);
+                return BadRequest(ex.Message);
             }
         }
     }
