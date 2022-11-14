@@ -10,4 +10,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BigShoeCompany.FileManagement\BigShoeCompany.FileManagement.csproj" />
+    <ProjectReference Include="..\..\BigShoeCompany.Infrastructure.Common\BigShoeCompany.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\..\BigShoeCompany.Service.Contracts\BigShoeCompany.Service.Contracts.csproj" />
+    <ProjectReference Include="..\..\BigShoeCompany.Service\BigShoeCompany.Service.csproj" />
+    <ProjectReference Include="..\..\BigShoeCopmany.API.Model\BigShoeCopmany.API.Model.csproj" />
+  </ItemGroup>
+
 </Project>
