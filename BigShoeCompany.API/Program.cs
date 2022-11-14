@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IValidatorService, ValidatorService>();
+builder.Services.AddTransient<IProcessorService, ProcessorService>();
 
 var app = builder.Build();
 
