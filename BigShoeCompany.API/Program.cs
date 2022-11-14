@@ -9,7 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<IOrderService>(x => new OrderService());
+builder.Services.AddTransient<IOrderService, OrderService>();
+builder.Services.AddTransient<IValidatorService, ValidatorService>();
+builder.Services.AddTransient<IProcessorService, ProcessorService>();
 
 var app = builder.Build();
 
