@@ -13,7 +13,7 @@ namespace BigShoeCompany.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=BigShoeCompany;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Server=LAM-2052-RJ-OR;Database=BigShoeCompany;Integrated Security=True;TrustServerCertificate=True");
             base.OnConfiguring(optionsBuilder);
         }
     }

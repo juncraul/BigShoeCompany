@@ -29,7 +29,7 @@ namespace BigShoeCompany.Controllers
             try
             {
                 FileContentTypeModule.ValidateContentType(file.File.FileName, FileContentTypeModule.AcceptedFileTypeOrder);
-                var result = await _orderService.UploadOrderFile(file);
+                var result = await _orderService.UploadOrderFileAsync(file);
                 return Ok(result);
 
             }
@@ -46,10 +46,7 @@ namespace BigShoeCompany.Controllers
         [Route("order/get-orders")]
         public async Task<List<OrderModel>> GetOrders()
         {
-            var orderModels = new List<OrderModel>();
-            orderModels.Add(new OrderModel { CustomerEmail = "adsfasd@dsfs.com", CustomerName = "Raul" });
-
-            return orderModels;
+            return await _orderService.GetAllOrdersAsync();
         }
     }
 }

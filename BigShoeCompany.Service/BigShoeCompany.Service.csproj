@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BigShoeCompany.DataAccess\BigShoeCompany.DataAccess.csproj" />
     <ProjectReference Include="..\BigShoeCompany.Infrastructure.Common\BigShoeCompany.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\BigShoeCompany.Service.Contracts\BigShoeCompany.Service.Contracts.csproj" />
   </ItemGroup>
