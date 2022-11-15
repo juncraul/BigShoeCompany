@@ -19,7 +19,7 @@ namespace BigShoeCompany.DataAccess.Migrations
                     CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CustomerEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    Size = table.Column<decimal>(type: "decimal(9,8)", precision: 9, scale: 8, nullable: false),
+                    Size = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
                     DateRequired = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Notes = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

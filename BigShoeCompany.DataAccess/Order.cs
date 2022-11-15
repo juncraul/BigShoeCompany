@@ -9,7 +9,7 @@ namespace BigShoeCompany.DataAccess
         public string CustomerName { get; set; }
         public string CustomerEmail { get; set; }
         public int Quantity { get; set; }
-        [Precision(9, 2)]
+        [Precision(10, 2)]
         public decimal Size { get; set; }
         public DateTime DateRequired { get; set; }
         public string Notes { get; set; }

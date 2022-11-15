@@ -47,8 +47,8 @@ namespace BigShoeCompany.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Size")
-                        .HasPrecision(9, 8)
-                        .HasColumnType("decimal(9,8)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
 
