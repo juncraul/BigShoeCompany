@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BigShoeCompany.FileManagement\BigShoeCompany.FileManagement.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Infrastructure.Common\BigShoeCompany.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Service.Contracts\BigShoeCompany.Service.Contracts.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Service\BigShoeCompany.Service.csproj" />
+    <ProjectReference Include="..\BigShoeCopmany.API.Model\BigShoeCopmany.API.Model.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.DataAccess\BigShoeCompany.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
