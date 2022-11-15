@@ -1,6 +1,7 @@
 using BigShoeCompany.FileManagement;
 using BigShoeCompany.Service.Contracts;
 using BigShoeCopmany.API.Model.Order;
+using BigShoeCopmany.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BigShoeCompany.Controllers
@@ -28,7 +29,7 @@ namespace BigShoeCompany.Controllers
             try
             {
                 FileContentTypeModule.ValidateContentType(file.File.FileName, FileContentTypeModule.AcceptedFileTypeOrder);
-                var result = await _orderService.UploadOrderFile(file);
+                var result = await _orderService.UploadOrderFileAsync(file);
                 return Ok(result);
 
             }
@@ -37,6 +38,15 @@ namespace BigShoeCompany.Controllers
                 _logger.LogError("Error uploading order file", ex.Message);
                 return BadRequest(ex.Message);
             }
+        }
+
+
+
+        [HttpGet]
+        [Route("order/get-orders")]
+        public async Task<List<OrderModel>> GetOrders()
+        {
+            return await _orderService.GetAllOrdersAsync();
         }
     }
 }

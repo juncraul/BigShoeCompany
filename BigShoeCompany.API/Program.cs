@@ -1,5 +1,7 @@
+using BigShoeCompany.DataAccess;
 using BigShoeCompany.Service;
 using BigShoeCompany.Service.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IValidatorService, ValidatorService>();
 builder.Services.AddTransient<IProcessorService, ProcessorService>();
+builder.Services.AddTransient<OrderRepository, OrderRepository>();
+
+
+builder.Services.AddDbContext<OrderContext>(options => options.UseSqlServer("Server=LAM-2052-RJ-OR;Database=BigShoeCompany;Integrated Security=True;TrustServerCertificate=True"));
 
 var app = builder.Build();
 
