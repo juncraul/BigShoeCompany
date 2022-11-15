@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BigShoeCompany.DataAccess\BigShoeCompany.DataAccess.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Infrastructure.Common\BigShoeCompany.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Service.Contracts\BigShoeCompany.Service.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
