@@ -15,11 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BigShoeCompany.FileManagement\BigShoeCompany.FileManagement.csproj" />
-    <ProjectReference Include="..\..\BigShoeCompany.Infrastructure.Common\BigShoeCompany.Infrastructure.Common.csproj" />
-    <ProjectReference Include="..\..\BigShoeCompany.Service.Contracts\BigShoeCompany.Service.Contracts.csproj" />
-    <ProjectReference Include="..\..\BigShoeCompany.Service\BigShoeCompany.Service.csproj" />
-    <ProjectReference Include="..\..\BigShoeCopmany.API.Model\BigShoeCopmany.API.Model.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.FileManagement\BigShoeCompany.FileManagement.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Infrastructure.Common\BigShoeCompany.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Service.Contracts\BigShoeCompany.Service.Contracts.csproj" />
+    <ProjectReference Include="..\BigShoeCompany.Service\BigShoeCompany.Service.csproj" />
+    <ProjectReference Include="..\BigShoeCopmany.API.Model\BigShoeCopmany.API.Model.csproj" />
     <ProjectReference Include="..\BigShoeCompany.DataAccess\BigShoeCompany.DataAccess.csproj" />
   </ItemGroup>
 

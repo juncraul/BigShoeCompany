@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BigShoeCompany\BigShoeCopmany.Model\BigShoeCopmany.Model.csproj" />
     <ProjectReference Include="..\BigShoeCopmany.API.Model\BigShoeCopmany.API.Model.csproj" />
+    <ProjectReference Include="..\BigShoeCopmany.Model\BigShoeCopmany.Model.csproj" />
   </ItemGroup>
 
 </Project>
